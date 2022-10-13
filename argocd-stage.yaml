@@ -7,14 +7,18 @@ spec:
   project: default
   source:
     repoURL: git@github.com:ManikandanH/argo-cd.git
-    targetRevision: main
+    targetRevision: HEAD
     path: sample
   destination:
     server: https://kubernetes.default.svc
     namespace: ps-staging
   syncPolicy:
+    retry:
+      limit: 2
+    automated: 
+        prune: true
+        selfHeal: true 
+        allowEmpty: false 
     syncOptions:
-    - CreateNamespace=true
-    automated:
-      selfHeal: true
-      prune: true
+      - CreateNamespace=true
+      - Replace=true
