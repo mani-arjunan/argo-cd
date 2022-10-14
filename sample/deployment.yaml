@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx:stable-alpine-perl
+        image: nginx:stable-alpine
         resources:
           limits:
             memory: "128Mi"
