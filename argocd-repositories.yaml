@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: private-repo
+  name: sample
   namespace: argocd
   labels:
     argocd.argoproj.io/secret-type: repository
 type: Opaque
 stringData:
   type: git
-  url: git@github.com:ManikandanH/argo-cd
+  url: https://github.com/ManikandanH/argo-cd.git
   sshPrivateKey: |
     -----BEGIN OPENSSH PRIVATE KEY-----
     b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
