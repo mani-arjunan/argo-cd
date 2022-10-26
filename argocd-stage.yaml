@@ -4,6 +4,7 @@ metadata:
   name: argocd
   annotations:
     notifications.argoproj.io/subscribe.on-sync-succeeded.jenkins: webhook:jenkins
+    notifications.argoproj.io/subscribe.on-sync-succeeded.gmail: itsmh0305@gmail.com
 spec:
   destination:
     name: ''
